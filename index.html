@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Addison Lane | Sports Business & Event Management</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================
+           GENERAL STYLES
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #26332c;
+            background-color: #f8f6f0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            background-color: #f8f6f0;
+            border-bottom: 1px solid #dedbd1;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #173c2b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6f8f7b;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            min-height: calc(100vh - 80px);
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 60px;
+            padding: 70px 8%;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .eyebrow {
+            color: #6f8f7b;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(4rem, 8vw, 7rem);
+            line-height: 0.95;
+            color: #173c2b;
+            margin-bottom: 25px;
+        }
+
+        .hero h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: #59665e;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 580px;
+            color: #68716b;
+            font-size: 1rem;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border: 1px solid #173c2b;
+            transition: 0.3s ease;
+        }
+
+        .button-primary {
+            background-color: #173c2b;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background-color: #2d5943;
+        }
+
+        .button-secondary {
+            color: #173c2b;
+            background-color: transparent;
+        }
+
+        .button-secondary:hover {
+            background-color: #e8e5db;
+        }
+
+        /* =========================
+           HERO IMAGE
+        ========================= */
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            height: 550px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            background-color: #173c2b;
+            color: white;
+            padding: 18px 25px;
+            max-width: 270px;
+        }
+
+        .image-caption span {
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            opacity: 0.75;
+        }
+
+        .image-caption strong {
+            font-size: 0.95rem;
+        }
+
+        /* =========================
+           INTRO SECTION
+        ========================= */
+
+        .intro {
+            background-color: #173c2b;
+            color: white;
+            padding: 100px 8%;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #a9b9ad;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .intro-content {
+            max-width: 950px;
+        }
+
+        .intro h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .intro p {
+            max-width: 750px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #d7ded9;
+        }
+
+        /* =========================
+           FOCUS AREAS
+        ========================= */
+
+        .focus {
+            padding: 100px 8%;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            color: #173c2b;
+            font-weight: 400;
+        }
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .focus-card {
+            border-top: 2px solid #173c2b;
+            padding: 30px 10px 20px 0;
+        }
+
+        .card-number {
+            font-size: 0.75rem;
+            color: #6f8f7b;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .focus-card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            color: #173c2b;
+            margin-bottom: 15px;
+        }
+
+        .focus-card p {
+            color: #68716b;
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           FEATURED EXPERIENCE
+        ========================= */
+
+        .featured {
+            background-color: #e7e5dc;
+            padding: 100px 8%;
+        }
+
+        .featured-container {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .featured-image {
+            height: 450px;
+            background:
+                linear-gradient(rgba(23, 60, 43, 0.15), rgba(23, 60, 43, 0.15)),
+                url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=900&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .featured-text .section-label {
+            color: #6f8f7b;
+        }
+
+        .featured-text h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: #173c2b;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .featured-text p {
+            color: #59635c;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .featured-tag {
+            display: inline-block;
+            border: 1px solid #9aa59e;
+            padding: 8px 13px;
+            margin: 4px 4px 4px 0;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #46564c;
+        }
+
+        /* =========================
+           CALL TO ACTION
+        ========================= */
+
+        .cta {
+            text-align: center;
+            padding: 110px 8%;
+            background-color: #f8f6f0;
+        }
+
+        .cta h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 400;
+            color: #173c2b;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            color: #68716b;
+            max-width: 550px;
+            margin: 0 auto 30px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #173c2b;
+            color: white;
+            padding: 30px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            font-size: 0.75rem;
+            color: #c8d1cb;
+        }
+
+        .footer-name {
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 0.7rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 7%;
+            }
+
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+
+            .hero-image img {
+                height: 450px;
+            }
+
+            .focus-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading h2 {
+                font-size: 2.8rem;
+            }
+
+            .featured-text h2 {
+                font-size: 2.8rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+        <a href="#" class="logo">ADDISON LANE</a>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p class="eyebrow">Sports • Events • Marketing</p>
+
+            <h1>Addison<br>Lane</h1>
+
+            <h2>Creating meaningful experiences at the intersection of sports, business, and events.</h2>
+
+            <p class="hero-description">
+                I am an Iowa State University student passionate about the sports and event industry.
+                Through experiences in event operations, marketing, guest engagement, and leadership,
+                I am building the skills to create memorable experiences both on and off the field.
+            </p>
+
+            <div class="buttons">
+                <a href="experience.html" class="button button-primary">
+                    Explore My Experience
+                </a>
+
+                <a href="resume.html" class="button button-secondary">
+                    View My Resume
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <!-- Replace this image URL with your professional photo -->
+            <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
+                alt="Professional portrait placeholder"
+            >
+
+            <div class="image-caption">
+                <span>Currently</span>
+                <strong>Building a career in sports & event management</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRODUCTION
+    ========================= -->
+
+    <section class="intro">
+
+        <div class="intro-content">
+
+            <p class="section-label">A little about me</p>
+
+            <h2>
+                I'm interested in what happens behind the scenes.
+            </h2>
+
+            <p>
+                My passion for the sports industry goes beyond simply being a fan.
+                I am fascinated by the planning, operations, marketing, hospitality,
+                and guest experience that bring an event to life. My goal is to use
+                these skills to create experiences that people remember long after
+                the final whistle.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOCUS AREAS
+    ========================= -->
+
+    <section class="focus">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">What I Do</p>
+                <h2>My Focus</h2>
+            </div>
+
+        </div>
+
+
+        <div class="focus-grid">
+
+            <div class="focus-card">
+
+                <p class="card-number">01</p>
+
+                <h3>Events</h3>
+
+                <p>
+                    Planning and executing memorable experiences through
+                    thoughtful organization, communication, and attention
+                    to detail.
+                </p>
+
+            </div>
+
+
+            <div class="focus-card">
+
+                <p class="card-number">02</p>
+
+                <h3>Sports</h3>
+
+                <p>
+                    Exploring the business behind sports and creating
+                    meaningful experiences for fans, guests, athletes,
+                    partners, and communities.
+                </p>
+
+            </div>
+
+
+            <div class="focus-card">
+
+                <p class="card-number">03</p>
+
+                <h3>Marketing</h3>
+
+                <p>
+                    Connecting brands and audiences through creative
+                    strategy, digital marketing, storytelling, and
+                    engaging content.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURED EXPERIENCE
+    ========================= -->
+
+    <section class="featured">
+
+        <div class="featured-container">
+
+            <div class="featured-image"></div>
+
+
+            <div class="featured-text">
+
+                <p class="section-label">Featured Experience</p>
+
+                <h2>
+                    2026 Presidents Cup
+                </h2>
+
+                <p>
+                    I recently accepted an internship opportunity with the
+                    PGA TOUR at the 2026 Presidents Cup. This opportunity
+                    allows me to gain hands-on experience within the sports
+                    and event industry while learning from professionals
+                    behind one of golf's premier international events.
+                </p>
+
+                <div>
+                    <span class="featured-tag">Sports Events</span>
+                    <span class="featured-tag">Guest Experience</span>
+                    <span class="featured-tag">Event Operations</span>
+                    <span class="featured-tag">Hospitality</span>
+                    <span class="featured-tag">Sports Marketing</span>
+                </div>
+
+                <br><br>
+
+                <a href="experience.html" class="button button-primary">
+                    View Experience
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================= -->
+
+    <section class="cta">
+
+        <p class="section-label">Let's Connect</p>
+
+        <h2>Let's create experiences worth remembering.</h2>
+
+        <p>
+            Interested in sports, events, marketing, or future opportunities?
+            I'd love to connect.
+        </p>
+
+        <a href="contact.html" class="button button-primary">
+            Get In Touch
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p class="footer-name">ADDISON LANE</p>
+
+        <p>
+            Sports Business • Event Management • Marketing
+        </p>
+
+        <p>
+            © 2026 Addison Lane
+        </p>
+
+    </footer>
+
+</body>
+</html>
