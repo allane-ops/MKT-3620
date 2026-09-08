@@ -1,200 +1,59 @@
-/* =========================================================
-   ADDISON LANE WEBSITE NAVIGATION
-   This file can be used across EVERY page.
-========================================================= */
-
+/* =====================================================
+   ADDISON LANE WEBSITE
+   Navigation JavaScript
+===================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    /* =====================================================
-       PRIMARY NAVIGATION
-    ====================================================== */
-
-    const primaryNavigation = document.getElementById(
-        "primary-navigation"
-    );
-
-
-    if (primaryNavigation) {
-
-        primaryNavigation.innerHTML = `
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="experience.html">
-                Experience
-            </a>
-
-            <a href="projects.html">
-                Projects
-            </a>
-
-            <a href="portfolio.html">
-                Portfolio
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        `;
-
-    }
-
-
-
-    /* =====================================================
-       SECONDARY NAVIGATION
-    ====================================================== */
-
-    const secondaryNavigation = document.getElementById(
-        "secondary-navigation"
-    );
-
-
-    if (secondaryNavigation) {
-
-        secondaryNavigation.innerHTML = `
-
-            <a href="blog.html">
-                Blog
-            </a>
-
-            <span>|</span>
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-            <span>|</span>
-
-            <a href="resources.html">
-                Resources
-            </a>
-
-        `;
-
-    }
-
-
-
-    /* =====================================================
-       LEFT SIDEBAR — EXPLORE
-    ====================================================== */
-
-    const sidebarNavigation = document.getElementById(
-        "sidebar-navigation"
-    );
-
-
-    if (sidebarNavigation) {
-
-        sidebarNavigation.innerHTML = `
-
-            <a href="index.html">
-                ♧ &nbsp; Home
-            </a>
-
-            <a href="about.html">
-                About Me
-            </a>
-
-            <a href="experience.html">
-                Experience
-            </a>
-
-            <a href="projects.html">
-                Projects
-            </a>
-
-            <a href="portfolio.html">
-                Portfolio
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        `;
-
-    }
-
-
-
-    /* =====================================================
-       LEFT SIDEBAR — MORE
-    ====================================================== */
-
-    const moreNavigation = document.getElementById(
-        "more-navigation"
-    );
-
-
-    if (moreNavigation) {
-
-        moreNavigation.innerHTML = `
-
-            <a href="leadership.html">
-                Leadership
-            </a>
-
-            <a href="events.html">
-                Events
-            </a>
-
-            <a href="marketing.html">
-                Marketing
-            </a>
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-        `;
-
-    }
-
-
-
-    /* =====================================================
-       AUTOMATICALLY HIGHLIGHT CURRENT PAGE
-    ====================================================== */
+    /* =================================================
+       HIGHLIGHT CURRENT PAGE
+    ================================================= */
 
     const currentPage =
-        window.location.pathname
-        .split("/")
-        .pop()
-        .toLowerCase();
+        window.location.pathname.split("/").pop() || "index.html";
 
+    const navLinks =
+        document.querySelectorAll(".nav-link");
 
-    const allLinks =
-        document.querySelectorAll("a");
-
-
-    allLinks.forEach(function (link) {
+    navLinks.forEach(function (link) {
 
         const linkPage =
-            link
-            .getAttribute("href")
-            ?.split("/")
-            .pop()
-            .toLowerCase();
+            link.getAttribute("href");
+
+        if (linkPage === currentPage) {
+
+            link.classList.add("active");
+
+        } else {
+
+            link.classList.remove("active");
+
+        }
+
+    });
 
 
-        if (
-            linkPage === currentPage ||
-            (
-                currentPage === "" &&
-                linkPage === "index.html"
-            )
-        ) {
+    /* =================================================
+       LEFT SIDEBAR CURRENT PAGE
+    ================================================= */
+
+    const sidebarLinks =
+        document.querySelectorAll(".side-link");
+
+    sidebarLinks.forEach(function (link) {
+
+        const linkPage =
+            link.getAttribute("href");
+
+        /*
+         * Remove anchors such as #section
+         */
+
+        const cleanLink =
+            linkPage.split("#")[0];
+
+        if (cleanLink === currentPage) {
 
             link.classList.add("active");
 
@@ -203,38 +62,99 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+    /* =================================================
+       SMOOTH SCROLLING FOR SAME-PAGE LINKS
+    ================================================= */
 
-    /* =====================================================
-       MOBILE MENU SCROLL BEHAVIOR
-    ====================================================== */
+    const internalLinks =
+        document.querySelectorAll('a[href^="#"]');
 
-    const navigation =
-        document.querySelector(
-            ".primary-navigation"
-        );
+    internalLinks.forEach(function (link) {
 
+        link.addEventListener("click", function (event) {
 
-    if (navigation) {
+            const targetID =
+                this.getAttribute("href");
 
-        navigation.addEventListener(
-            "wheel",
-            function (event) {
+            if (
+                targetID &&
+                targetID !== "#"
+            ) {
 
-                if (
-                    window.innerWidth <= 800
-                ) {
+                const target =
+                    document.querySelector(targetID);
+
+                if (target) {
 
                     event.preventDefault();
 
-                    navigation.scrollLeft +=
-                        event.deltaY;
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
 
                 }
+
+            }
+
+        });
+
+    });
+
+
+    /* =================================================
+       FADE-IN EFFECT
+    ================================================= */
+
+    const fadeElements =
+        document.querySelectorAll(
+            ".hero-container, .welcome-section, .featured-item"
+        );
+
+    fadeElements.forEach(function (element, index) {
+
+        element.style.opacity = "0";
+
+        element.style.transform =
+            "translateY(10px)";
+
+        element.style.transition =
+            "opacity 0.6s ease, transform 0.6s ease";
+
+        setTimeout(function () {
+
+            element.style.opacity = "1";
+
+            element.style.transform =
+                "translateY(0)";
+
+        }, 100 + (index * 80));
+
+    });
+
+
+    /* =================================================
+       HERO IMAGE ERROR CHECK
+    ================================================= */
+
+    const heroImage =
+        document.querySelector(".hero-image");
+
+    if (heroImage) {
+
+        heroImage.addEventListener(
+            "error",
+            function () {
+
+                console.warn(
+                    "Hero image could not be loaded. " +
+                    "Make sure your image is located at " +
+                    "images/addison-photo.jpg"
+                );
 
             }
         );
 
     }
-
 
 });
