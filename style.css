@@ -248,20 +248,6 @@ a {
     padding: 25px 35px;
 }
 
-.leaf-decoration {
-
-    position: absolute;
-
-    left: 0;
-    top: -32px;
-
-    font-size: 150px;
-
-    transform: rotate(-18deg);
-
-    color: rgba(126,145,130,0.25);
-}
-
 .header-note {
 
     position: relative;
