@@ -3,152 +3,779 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Website</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
+    <meta
+        name="description"
+        content="Addison Lane — Event Management and Business Marketing student focused on sports, events, marketing, and guest experiences."
+    >
+
+    <title>Addison Lane | Event Management & Marketing</title>
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+    <!-- =====================================================
+         WEBSITE WRAPPER
+    ====================================================== -->
+
     <div class="site-wrapper">
 
-        <!-- HEADER -->
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
         <header class="site-header">
 
+
+            <!-- LOGO -->
             <div class="logo">
-                Logo
+
+                <a href="index.html">
+                    AL
+                </a>
+
             </div>
 
+
+            <!-- HEADER CONTENT -->
             <div class="header-content">
 
+
                 <div class="header-info">
-                    <h1>My Website</h1>
+
+                    <h1>
+                        Addison Lane
+                    </h1>
 
                     <p>
-                        This area is for informational graphics
-                        which describe what your site is about.
+                        Event Management · Business Marketing · Sports
                     </p>
+
                 </div>
 
-                <!-- JAVASCRIPT NAVIGATION -->
+
+                <!--
+                    Navigation is automatically inserted
+                    by navigation.js
+                -->
+
                 <div id="navigation-container"></div>
+
 
             </div>
 
         </header>
 
 
-        <!-- MAIN CONTENT -->
+
+        <!-- =================================================
+             MAIN THREE-COLUMN LAYOUT
+        ================================================== -->
+
         <main class="main-layout">
 
-            <!-- LEFT SIDEBAR -->
+
+            <!-- =================================================
+                 LEFT SIDEBAR
+            ================================================== -->
+
             <aside class="left-sidebar">
 
-                <h2>Primary Navigation</h2>
+
+                <h2>
+                    Explore
+                </h2>
+
 
                 <ul>
+
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html">
+                            Home
+                        </a>
                     </li>
 
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html">
+                            About Me
+                        </a>
                     </li>
 
                     <li>
-                        <a href="projects.html">Projects</a>
+                        <a href="experience.html">
+                            Experience
+                        </a>
                     </li>
+
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="portfolio.html">
+                            Portfolio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
                 </ul>
+
+
+
+                <h2>
+                    More
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        <a href="leadership.html">
+                            Leadership
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="events.html">
+                            Events
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="marketing.html">
+                            Marketing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                </ul>
+
 
             </aside>
 
 
-            <!-- CENTER CONTENT -->
+
+            <!-- =================================================
+                 MAIN CONTENT
+            ================================================== -->
+
             <section class="main-content">
 
+
+                <!-- HERO IMAGE -->
+
                 <div class="hero-image">
+
                     <img
                         src="images/hero.jpg"
-                        alt="Hero image"
+                        alt="Addison Lane event and sports portfolio"
                     >
+
                 </div>
 
-                <h1>Main Content Area</h1>
 
-                <p>
-                    This is where the primary content of the
-                    website will go. You can add text,
-                    photographs, graphics, videos, and other
-                    content here.
+
+                <!-- INTRODUCTION -->
+
+                <p class="eyebrow">
+                    Welcome
                 </p>
 
+
+                <h1>
+                    Creating experiences<br>
+                    worth remembering.
+                </h1>
+
+
                 <p>
-                    The central content area is intentionally
-                    larger than the sidebars so that it becomes
-                    the main visual focus of the website.
+                    Hi, I'm Addison! I'm a student at Iowa State University
+                    studying Event Management and Business Marketing with
+                    a passion for the sports industry.
                 </p>
+
+
+                <p>
+                    I love bringing people, brands, and experiences together.
+                    My interests sit at the intersection of event operations,
+                    sports business, marketing, hospitality, and creating
+                    memorable experiences for guests.
+                </p>
+
+
+                <a
+                    href="about.html"
+                    class="button"
+                >
+                    Get to know me
+                </a>
+
+
+
+                <!-- =================================================
+                     FEATURED EXPERIENCE
+                ================================================== -->
+
+                <section class="home-section">
+
+                    <p class="eyebrow">
+                        Currently
+                    </p>
+
+                    <h2>
+                        Sports + Event Management
+                    </h2>
+
+                    <p>
+                        My experiences have allowed me to explore both the
+                        behind-the-scenes operations of events and the
+                        marketing that connects audiences with them.
+                    </p>
+
+                    <a
+                        href="experience.html"
+                        class="text-link"
+                    >
+                        View my experience →
+                    </a>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     FEATURED EXPERIENCE CARDS
+                ================================================== -->
+
+                <section class="home-section">
+
+                    <p class="eyebrow">
+                        Featured
+                    </p>
+
+                    <div class="experience-grid">
+
+
+                        <!-- SPORTS -->
+
+                        <a
+                            href="sports.html"
+                            class="experience-card"
+                        >
+
+                            <div class="card-image">
+
+                                <img
+                                    src="images/sports.jpg"
+                                    alt="Sports event"
+                                >
+
+                            </div>
+
+                            <div class="card-content">
+
+                                <span>
+                                    Sports
+                                </span>
+
+                                <h3>
+                                    Building a career in sports
+                                </h3>
+
+                                <p>
+                                    Exploring sports business, events,
+                                    hospitality, and fan experiences.
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <!-- EVENTS -->
+
+                        <a
+                            href="events.html"
+                            class="experience-card"
+                        >
+
+                            <div class="card-image">
+
+                                <img
+                                    src="images/events.jpg"
+                                    alt="Event management"
+                                >
+
+                            </div>
+
+                            <div class="card-content">
+
+                                <span>
+                                    Events
+                                </span>
+
+                                <h3>
+                                    Creating memorable experiences
+                                </h3>
+
+                                <p>
+                                    From event operations to guest services,
+                                    I enjoy creating experiences people
+                                    remember.
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <!-- MARKETING -->
+
+                        <a
+                            href="marketing.html"
+                            class="experience-card"
+                        >
+
+                            <div class="card-image">
+
+                                <img
+                                    src="images/marketing.jpg"
+                                    alt="Marketing project"
+                                >
+
+                            </div>
+
+                            <div class="card-content">
+
+                                <span>
+                                    Marketing
+                                </span>
+
+                                <h3>
+                                    Connecting brands with people
+                                </h3>
+
+                                <p>
+                                    Combining creativity and strategy through
+                                    digital and social media marketing.
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     EDUCATION
+                ================================================== -->
+
+                <section class="home-section education-section">
+
+                    <p class="eyebrow">
+                        Education
+                    </p>
+
+                    <h2>
+                        Iowa State University
+                    </h2>
+
+                    <p>
+                        Studying Event Management and Business Marketing,
+                        with a focus on building a career in the sports
+                        and event industry.
+                    </p>
+
+
+                    <div class="education-details">
+
+                        <div>
+                            <strong>
+                                Event Management
+                            </strong>
+
+                            <span>
+                                Sports & Events
+                            </span>
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Business Marketing
+                            </strong>
+
+                            <span>
+                                Digital & Social Media
+                            </span>
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Honors Program
+                            </strong>
+
+                            <span>
+                                Iowa State University
+                            </span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     LEADERSHIP
+                ================================================== -->
+
+                <section class="home-section">
+
+                    <p class="eyebrow">
+                        Leadership
+                    </p>
+
+                    <h2>
+                        Leading through experience.
+                    </h2>
+
+                    <p>
+                        Outside of the classroom, I've developed leadership
+                        experience through campus organizations, service,
+                        event work, and student involvement.
+                    </p>
+
+
+                    <div class="leadership-list">
+
+                        <div class="leadership-item">
+
+                            <span class="number">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Dance Marathon
+                                </h3>
+
+                                <p>
+                                    Freshman Morale Captain and team
+                                    leadership experience supporting
+                                    Children's Miracle Network.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="leadership-item">
+
+                            <span class="number">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Alpha Delta Pi
+                                </h3>
+
+                                <p>
+                                    Active involvement in chapter events,
+                                    philanthropy, and community service.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="leadership-item">
+
+                            <span class="number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Event Experience
+                                </h3>
+
+                                <p>
+                                    Experience supporting event setup,
+                                    guest check-in, recognition moments,
+                                    and event operations.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     CTA
+                ================================================== -->
+
+                <section class="contact-cta">
+
+                    <p class="eyebrow">
+                        Let's connect
+                    </p>
+
+                    <h2>
+                        Interested in working together?
+                    </h2>
+
+                    <p>
+                        I'm always excited to connect with people in
+                        sports, events, marketing, and hospitality.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="button"
+                    >
+                        Get in touch
+                    </a>
+
+                </section>
+
 
             </section>
 
 
-            <!-- RIGHT SIDEBAR -->
+
+            <!-- =================================================
+                 RIGHT SIDEBAR
+            ================================================== -->
+
             <aside class="right-sidebar">
+
 
                 <div class="sticky-content">
 
-                    <h2>Featured Content</h2>
 
-                    <ul>
-                        <li>
-                            <a href="news.html">
-                                News
-                            </a>
-                        </li>
+                    <h2>
+                        Featured
+                    </h2>
 
-                        <li>
-                            <a href="offers.html">
-                                Offers
-                            </a>
-                        </li>
 
-                        <li>
-                            <a href="resources.html">
-                                Resources
-                            </a>
-                        </li>
 
-                        <li>
-                            <a href="social.html">
-                                Social Media
-                            </a>
-                        </li>
-                    </ul>
+                    <!-- PRESIDENTS CUP -->
+
+                    <a
+                        href="presidents-cup.html"
+                        class="feature-card"
+                    >
+
+                        <img
+                            src="images/presidents-cup.jpg"
+                            alt="Professional golf event"
+                        >
+
+                        <div class="feature-card-text">
+
+                            <span class="feature-card-title">
+                                2026 Presidents Cup
+                            </span>
+
+                            <span class="feature-card-description">
+                                PGA TOUR event experience
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- MARKETING -->
+
+                    <a
+                        href="marketing.html"
+                        class="feature-card"
+                    >
+
+                        <img
+                            src="images/marketing.jpg"
+                            alt="Digital marketing project"
+                        >
+
+                        <div class="feature-card-text">
+
+                            <span class="feature-card-title">
+                                Digital Marketing
+                            </span>
+
+                            <span class="feature-card-description">
+                                Strategy + creative projects
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- EVENTS -->
+
+                    <a
+                        href="events.html"
+                        class="feature-card"
+                    >
+
+                        <img
+                            src="images/events.jpg"
+                            alt="Event experience"
+                        >
+
+                        <div class="feature-card-text">
+
+                            <span class="feature-card-title">
+                                Event Management
+                            </span>
+
+                            <span class="feature-card-description">
+                                Operations + guest experiences
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- PORTFOLIO -->
+
+                    <a
+                        href="portfolio.html"
+                        class="feature-card"
+                    >
+
+                        <img
+                            src="images/portfolio.jpg"
+                            alt="Creative portfolio"
+                        >
+
+                        <div class="feature-card-text">
+
+                            <span class="feature-card-title">
+                                My Portfolio
+                            </span>
+
+                            <span class="feature-card-description">
+                                A collection of my work
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- SOCIAL -->
+
+                    <div class="sidebar-social">
+
+                        <h3>
+                            Find me
+                        </h3>
+
+                        <a href="#" target="_blank">
+                            LinkedIn
+                        </a>
+
+                        <a href="#" target="_blank">
+                            Instagram
+                        </a>
+
+                    </div>
+
 
                 </div>
 
             </aside>
 
+
         </main>
 
 
-        <!-- FOOTER -->
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
         <footer class="site-footer">
 
             <p>
-                © 2026 My Website |
-                <a href="contact.html">Contact</a> |
-                <a href="privacy.html">Privacy</a>
+                © 2026 Addison Lane
+                ·
+                <a href="index.html">
+                    Home
+                </a>
+                ·
+                <a href="contact.html">
+                    Contact
+                </a>
+                ·
+                <a href="privacy.html">
+                    Privacy
+                </a>
             </p>
 
         </footer>
 
+
     </div>
 
 
-    <!-- NAVIGATION JAVASCRIPT -->
+    <!-- =====================================================
+         JAVASCRIPT NAVIGATION
+    ====================================================== -->
+
     <script src="navigation.js"></script>
+
 
 </body>
 
