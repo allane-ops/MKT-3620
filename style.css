@@ -166,21 +166,6 @@ a {
     position: relative;
     left: 9px;
 }
-
-.logo-bow {
-
-    position: absolute;
-
-    top: 51px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    font-family: var(--serif);
-
-    font-size: 30px;
-
-    opacity: 0.8;
 }
 
 .logo-name {
