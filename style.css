@@ -971,3 +971,20 @@ addison-photo.jpg.jpg}
 .hero-button:hover {
     background: #34463b;
 }
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .hero-content {
+        padding: 50px 30px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+}
